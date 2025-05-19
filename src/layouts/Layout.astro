@@ -1,22 +1,28 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import "@fontsource-variable/outfit";
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mi Landing Page</title>
 	</head>
 	<body>
-		<slot />
+		<Header />
+
+		<main>
+			<slot />
+		</main>
 	</body>
 </html>
 
 <style>
-	html,
 	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+		color-scheme: dark light;
+		background-color: #f2f2f2;
 	}
 </style>

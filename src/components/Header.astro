@@ -1,0 +1,44 @@
+---
+import BabyIcon from "../assets/icons/Baby.astro";
+import SectionContainer from "./SectionContainer.astro";
+import ShoppingCar from "../assets/icons/ShoppingCar.astro";
+import SearchBtn from "../assets/icons/SearchBtn.astro";
+---
+
+<header>
+    <SectionContainer class="flex justify-between px-2 py-4">
+        <a href="#" class="flex items-center gap-2">
+            <BabyIcon class="size-16" />
+            Raimbow <br />Rattles
+        </a>
+
+        <nav class="flex items-center gap-8">
+            <a href="#">Principal</a>
+            <a href="#">Tienda</a>
+            <a href="#">Páginas</a>
+            <a href="#">Blog</a>
+            <a href="#">Contacto</a>
+        </nav>
+
+        <div class="flex items-center gap-x-3">
+            <ShoppingCar class="size-6" />
+            <div
+                class="flex items-center border-2 border-gray-300 rounded-full"
+            >
+                <input
+                    class="outline-none pl-4 pr-2 py-2"
+                    type="text"
+                    name="search"
+                    id="search"
+                    placeholder="Buscar..."
+                />
+                <button
+                    class="flex items-center justify-center bg-blue-400 rounded-full size-10 cursor-pointer"
+                    type="button"
+                >
+                    <SearchBtn class="size-5 stroke-[#f2f2f2]" />
+                </button>
+            </div>
+        </div>
+    </SectionContainer>
+</header>
