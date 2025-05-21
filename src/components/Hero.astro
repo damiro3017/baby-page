@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import BackgrondImage from "../assets/background-hero.png";
+import SectionContainer from "./SectionContainer.astro";
+import LinkButton from "./LinkButton.astro";
+---
+
+<section
+    class="bg-cover bg-center py-40 h-[700px] backdrop-brightness-50"
+    style={`background-image: url(${BackgrondImage.src})`}
+>
+    <SectionContainer class="flex justify-end">
+        <div class="flex flex-col w-[600px]">
+            <h1 class="text-5xl font-bold text-white">
+                ¡Juega, aprende y crece!
+            </h1>
+            <p class="mt-4 text-lg text-balance">
+                Creando sonrisas con cada juguete, hecho para aprender,
+                divertirse y crecer.
+            </p>
+            <LinkButton class="mt-16 text-black">Comprar</LinkButton>
+        </div>
+    </SectionContainer>
+</section>

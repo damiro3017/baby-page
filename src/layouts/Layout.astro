@@ -1,7 +1,8 @@
 ---
+import "@fontsource-variable/outfit";
 import "../styles/global.css";
 import Header from "../components/Header.astro";
-import "@fontsource-variable/outfit";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -13,16 +14,14 @@ import "@fontsource-variable/outfit";
 	</head>
 	<body>
 		<Header />
-
-		<main>
-			<slot />
-		</main>
+		<slot />
+		<Footer />
 	</body>
 </html>
 
 <style>
 	body {
-		color-scheme: dark light;
+		color-scheme: light dark;
 		background-color: #f2f2f2;
 	}
 </style>

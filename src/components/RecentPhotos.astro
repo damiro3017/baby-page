@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+import RecentPhoto01 from "../assets/recentPhoto01.png";
+import RecentPhoto02 from "../assets/recentPhoto02.png";
+import RecentPhoto03 from "../assets/recentPhoto03.png";
+import RecentPhoto04 from "../assets/recentPhoto04.png";
+
+const photos = [RecentPhoto01, RecentPhoto02, RecentPhoto03, RecentPhoto04];
+---
+
+<div class="flex gap-2 overflow-hidden">
+    {
+        photos.map((photo) => (
+            <Image
+                src={photo}
+                alt="Foto reciente"
+                class="w-1/4 object-cover shrink-0"
+            />
+        ))
+    }
+</div>

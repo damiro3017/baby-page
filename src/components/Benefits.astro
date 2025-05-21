@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import Money from "../assets/icons/Money.astro";
+import AllDay from "../assets/icons/AllDay.astro";
+import FreeShip from "../assets/icons/FreeShip.astro";
+import BenefitsCard from "./BenefitsCard.astro";
+---
+
+<div class="flex gap-4 justify-center">
+    <BenefitsCard
+        Icon={AllDay}
+        title="Atención al cliente"
+        text="Seguimiento en 24 horas"
+        className="text-blue-600"
+    />
+    <BenefitsCard
+        Icon={FreeShip}
+        title="Envío gratuito"
+        text="Envío gratuito a partir de $150.000"
+        className="text-orange-600"
+    />
+    <BenefitsCard
+        Icon={Money}
+        title="Devolución"
+        text="En 7 días"
+        className="text-green-600"
+    />
+</div>

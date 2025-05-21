@@ -1,0 +1,69 @@
+---
+import { Image } from "astro:assets";
+import BackgroundFooter from "../assets/background-footer.png";
+import BabyIcon from "../assets/icons/Baby.astro";
+import InstagramIcon from "../assets/icons/Instagram.astro";
+import YouTubeIcon from "../assets/icons/YouTube.astro";
+import TwitterIcon from "../assets/icons/Twitter.astro";
+import PinterestIcon from "../assets/icons/Pinterest.astro";
+---
+
+<section
+    class="h-[600px] py-32 px-24"
+    style={`background-image: url(${BackgroundFooter.src})`}
+>
+    <div class="grid grid-cols-3 w-[700px] gap-16">
+        <div>
+            <a href="#" class="flex items-center justify-center gap-2">
+                <BabyIcon class="size-16" />
+                Raimbow <br />Rattles
+            </a>
+            <ul class="flex gap-2 mt-4">
+                <a
+                    href="https://www.instagram.com"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <InstagramIcon class="size-10 fill-red-400 p-1" />
+                </a>
+                <a href="https://www.x.com" target="_blank" rel="noopener">
+                    <TwitterIcon class="size-10 fill-red-400 p-1" />
+                </a>
+                <a
+                    href="https://www.youtube.com"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <YouTubeIcon class="size-10 fill-red-400 p-1" />
+                </a>
+                <a
+                    href="https://www.pinterest.com"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <PinterestIcon class="size-10 fill-red-400 p-1" />
+                </a>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-xl text-blue-900 font-medium">Mi cuenta</h3>
+            <ul class="flex gap-4 flex-col mt-4">
+                <a href="">Seguir mi pedido</a>
+                <a href="">Términos de uso</a>
+                <a href="">Lista de deseos</a>
+                <a href="">Envía tu feedback</a>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-xl text-blue-900 font-medium">
+                Atención al cliente
+            </h3>
+            <ul class="flex gap-4 flex-col mt-4">
+                <a href="">Lunes a Viernes</a>
+                <a href="">10am - 6pm (Hora local)</a>
+                <a href="">Call us: 123-456-7868</a>
+                <a href="">Email us: info@example.com</a>
+            </ul>
+        </div>
+    </div>
+</section>

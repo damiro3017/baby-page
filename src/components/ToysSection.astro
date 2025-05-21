@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import Banner01 from "../assets/banner-01.png";
+import Banner02 from "../assets/banner-02.png";
+import ToysCollections from "./ToysCollections.astro";
+import LinkButton from "./LinkButton.astro";
+---
+
+<div class="mt-16">
+    <ToysCollections />
+
+    <div class="flex gap-4 mt-12">
+        <div class="w-1/2">
+            <img class="w-full object-cover" src={Banner01.src} alt="" />
+        </div>
+        <div class="w-1/2 relative">
+            <img class="w-full object-cover" src={Banner02.src} alt="" />
+            <div class="absolute flex flex-col right-0 top-10 px-4">
+                <h3 class="text-blue-500 text-4xl">Juguetes ecológicos</h3>
+                <p>Venta flash 30%, Descuento extra para clientes fieles</p>
+                <LinkButton class="mt-8">Comprar</LinkButton>
+            </div>
+        </div>
+    </div>
+</div>

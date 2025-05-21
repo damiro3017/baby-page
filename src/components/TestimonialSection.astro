@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import testimonial01 from "../assets/testimonial01.png";
+import testimonial02 from "../assets/testimonial02.png";
+import testimonial03 from "../assets/testimonial03.png";
+import TestimonialCard from "./TestimonialCard.astro";
+---
+
+<div class="flex gap-4">
+    <TestimonialCard
+        imagePath={testimonial01}
+        name="Ana Gómez"
+        message="Los juguetes de Raimbow Rattles son los mejores que he comprado. A Mateo le encantan."
+    />
+    <TestimonialCard
+        imagePath={testimonial02}
+        name="Luis Torres"
+        message="La calidad es excelente, y el diseño es adorable. ¡Muy recomendados!"
+    />
+    <TestimonialCard
+        imagePath={testimonial03}
+        name="Carolina Méndez"
+        message="Me sorprendió la atención al detalle. No solo son seguros, sino que también son preciosos. Mi hija no los suelta ni para dormir."
+    />
+</div>

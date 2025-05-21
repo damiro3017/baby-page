@@ -1,5 +1,37 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import TitleSection from "../components/TitleSection.astro";
+import ToysSection from "../components/ToysSection.astro";
+import Hero from "../components/Hero.astro";
+import TestimonialSection from "../components/TestimonialSection.astro";
+import RecentPhotos from "../components/RecentPhotos.astro";
+import Benefits from "../components/Benefits.astro";
+import Newsletter from "../components/Newsletter.astro";
 ---
 
-<Layout title="Hola Mundo" />
+<Layout title="Hola Mundo">
+    <main>
+        <Hero />
+        <SectionContainer>
+            <TitleSection>Encuentra el juguete perfecto</TitleSection>
+            <ToysSection />
+        </SectionContainer>
+        <SectionContainer>
+            <TitleSection>Escuche a otros padres felices</TitleSection>
+            <TestimonialSection />
+        </SectionContainer>
+        <SectionContainer>
+            <TitleSection>Sesiones de fotos recientes</TitleSection>
+            <RecentPhotos />
+        </SectionContainer>
+        <SectionContainer>
+            <TitleSection>Beneficios</TitleSection>
+            <Benefits />
+        </SectionContainer>
+        <SectionContainer>
+            <TitleSection>Boletín de noticias</TitleSection>
+            <Newsletter />
+        </SectionContainer>
+    </main>
+</Layout>

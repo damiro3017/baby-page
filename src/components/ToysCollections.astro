@@ -1,0 +1,60 @@
+---
+import ToyCollection01 from "../assets/icons/ToyCollection01.astro";
+import ToyCollection02 from "../assets/icons/ToyCollection02.astro";
+import ToyCollection03 from "../assets/icons/ToyCollection03.astro";
+import ToyCollection04 from "../assets/icons/ToyCollection04.astro";
+import ToyCollection05 from "../assets/icons/ToyCollection05.astro";
+---
+
+<div class="flex justify-between items-center gap-16 text-center text-xl">
+    <a href="#" target="_blank" rel="noopener">
+        <div>
+            <ToyCollection01 />
+        </div>
+        Juegos infantiles
+    </a>
+    <a href="#" target="_blank" rel="noopener">
+        <div>
+            <ToyCollection02 />
+        </div>
+        Juguetes de control
+    </a>
+    <a href="#" target="_blank" rel="noopener">
+        <div>
+            <ToyCollection03 />
+        </div>
+        Juguetes educativos
+    </a>
+    <a href="#" target="_blank" rel="noopener">
+        <div>
+            <ToyCollection04 />
+        </div>
+        Juguetes ecológicos
+    </a>
+    <a href="#" target="_blank" rel="noopener">
+        <div>
+            <ToyCollection05 />
+        </div>
+        Juguetes de peluche
+    </a>
+</div>
+
+<style>
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    a > div {
+        display: flex;
+        height: 150px;
+        transition: all ease-in-out 0.2s;
+    }
+
+    a > div:hover {
+        transform: scaley(0.95) translateY(3px);
+    }
+</style>

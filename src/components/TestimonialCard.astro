@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+const { imagePath, name, message } = Astro.props;
+---
+
+<div
+    class="flex rounded-xl flex-col gap-y-4 pt-8 pb-4 px-8 flex-1 bg-rose-200/50"
+>
+    <div>⭐⭐⭐⭐⭐</div>
+    <div><p class="text-gray-700 italic">“{message}”</p></div>
+    <div class="flex items-center gap-4 mt-auto">
+        <Image
+            src={imagePath}
+            alt={name}
+            class="w-12 h-12 rounded-full object-cover"
+        />
+        <p class="font-semibold">{name}</p>
+    </div>
+</div>
