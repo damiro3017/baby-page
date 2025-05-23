@@ -1,25 +1,104 @@
----
-import SearchBtnIcon from "../assets/icons/SearchBtnIcon.astro";
-import ShoppingCar from "../assets/icons/ShoppingCar.astro";
----
-
-<script></script>
-
-<div class="flex items-center gap-x-3">
-    <ShoppingCar class="size-6" />
-    <div class="flex items-center border-2 border-gray-300 rounded-full">
+<div class="flex items-center gap-x-6">
+    <div
+        class="flex items-center border-2 border-gray-300 rounded-full relative"
+        id="searchContainer"
+    >
         <input
-            class="outline-none w-48 pl-4 pr-2 py-2"
+            class="outline-none py-2 px-4 relative"
+            id="search"
             type="text"
             name="search"
-            id="search"
             placeholder="Buscar..."
         />
-        <button
-            class="flex items-center justify-center bg-blue-400 rounded-full size-10 cursor-pointer"
-            type="button"
+        <ul
+            id="articlesList"
+            class="articles-dropdown
+            rounded-2xl flex flex-col gap-4 z-10 absolute top-[100%] left-0 w-full p-4 bg-white/20 backdrop-blur-sm"
         >
-            <SearchBtnIcon class="size-5 stroke-[#f2f2f2]" />
-        </button>
+            <li><a class="article" href="#">Bloques Apilables Suaves</a></li>
+            <li><a class="article" href="#">Sonajero Arcoíris</a></li>
+            <li><a class="article" href="#">Peluche Estrella Musical</a></li>
+            <li><a class="article" href="#">Cubo Sensorial de Tela</a></li>
+            <li><a class="article" href="#">Alfombra de Juegos Bebé</a></li>
+            <li><a class="article" href="#">Libro de Tela Interactivo</a></li>
+            <li><a class="article" href="#">Móvil de Cuna con Animales</a></li>
+            <li>
+                <a class="article" href="#">Mordedor de Silicona Natural</a>
+            </li>
+            <li><a class="article" href="#">Coche de Madera para Bebé</a></li>
+            <li>
+                <a class="article" href="#">Pandereta Infantil de Colores</a>
+            </li>
+        </ul>
     </div>
 </div>
+
+<style>
+    .articles-dropdown {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .articles-dropdown li a {
+        padding: 0.25rem 0;
+        border-bottom: 1px solid transparent;
+        transition: all ease-in-out 0.2s;
+    }
+
+    .articles-dropdown li a:hover {
+        border-bottom: 1px solid black;
+    }
+</style>
+
+<script is:inline>
+    const searchInput = document.getElementById("search");
+    const searchContainer = document.getElementById("searchContainer");
+    const articlesList = document.getElementById("articlesList");
+
+    function showDropdown() {
+        articlesList.style.opacity = "1";
+        articlesList.style.visibility = "visible";
+    }
+
+    function hideDropdown() {
+        articlesList.style.opacity = "0";
+        articlesList.style.visibility = "hidden";
+    }
+
+    document.addEventListener("click", (e) => {
+        if (!searchContainer.contains(e.target)) {
+            hideDropdown();
+        }
+    });
+
+    searchInput.addEventListener("focus", () => {
+        showDropdown();
+    });
+
+    searchInput.addEventListener("keyup", (e) => {
+        if (e.key === "Escape") {
+            searchInput.value = "";
+            hideDropdown();
+            return;
+        }
+
+        const searchTerm = e.target.value.toLowerCase();
+        let hasVisible = false;
+
+        document.querySelectorAll(".article").forEach((article) => {
+            const match = article.textContent
+                .toLowerCase()
+                .includes(searchTerm);
+            article.closest("li").style.display = match ? "block" : "none";
+            if (match) hasVisible = true;
+        });
+
+        hasVisible ? showDropdown() : hideDropdown();
+    });
+</script>
+
+<style>
+    .filter {
+        display: none;
+    }
+</style>

@@ -1,0 +1,79 @@
+---
+import StoreCard from "../components/StoreCard.astro";
+import Product01 from "../assets/product01.png";
+import Product02 from "../assets/product02.png";
+import Product03 from "../assets/product03.png";
+import Product04 from "../assets/product04.png";
+import Product05 from "../assets/product05.png";
+import Product06 from "../assets/product06.png";
+import Product07 from "../assets/product07.png";
+import Product08 from "../assets/product08.png";
+import Product09 from "../assets/product09.png";
+import Product10 from "../assets/product10.png";
+---
+
+<article class="mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold mb-8">Nuestra Tienda</h1>
+    <div class="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-8">
+        <StoreCard
+            imagePath={Product01}
+            link="/products/product01"
+            title="Bloques Apilables Suaves"
+            price="$19.99"
+        />
+        <StoreCard
+            imagePath={Product02}
+            link="/products/product02"
+            title="Sonajero Arcoíris"
+            price="$12.99"
+        />
+        <StoreCard
+            imagePath={Product03}
+            link="/products/product03"
+            title="Peluche Estrella Musical"
+            price="$18.49"
+        />
+        <StoreCard
+            imagePath={Product04}
+            link="/products/product04"
+            title="Cubo Sensorial de Tela"
+            price="$21.99"
+        />
+        <StoreCard
+            imagePath={Product05}
+            link="/products/product05"
+            title="Alfombra de Juegos Bebé"
+            price="$35.00"
+        />
+        <StoreCard
+            imagePath={Product06}
+            link="/products/product06"
+            title="Libro de Tela Interactivo"
+            price="$14.75"
+        />
+        <StoreCard
+            imagePath={Product07}
+            link="/products/product07"
+            title="Móvil de Cuna con Animales"
+            price="$27.99"
+        />
+        <StoreCard
+            imagePath={Product08}
+            link="/products/product08"
+            title="Mordedor de Silicona Natural"
+            price="$9.95"
+        />
+        <StoreCard
+            imagePath={Product09}
+            link="/products/product09"
+            title="Coche de Madera para Bebé"
+            price="$16.30"
+        />
+        <StoreCard
+            imagePath={Product10}
+            link="/products/product10"
+            title="Pandereta Infantil de Colores"
+            price="$11.80"
+        />
+    </div>
+</article>

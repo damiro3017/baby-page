@@ -1,0 +1,54 @@
+---
+import BenefitsCard from "../components/BenefitsCard.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Layout from "../layouts/Layout.astro";
+import PhoneIcon from "../assets/icons/PhoneIcon.astro";
+import PlaceGPS from "../assets/icons/PlaceGPS.astro";
+import EmailIcon from "../assets/icons/EmailIcon.astro";
+---
+
+<Layout>
+    <SectionContainer>
+        <div class="flex gap-4 justify-center">
+            <BenefitsCard
+                Icon={PhoneIcon}
+                title="Número de teléfono"
+                text="123-456-7868"
+            />
+            <BenefitsCard
+                Icon={EmailIcon}
+                title="Email"
+                text="info@example.com"
+            />
+            <BenefitsCard
+                Icon={PlaceGPS}
+                title="Dirección"
+                text="1930 marigold lane, way Miami, Florida USA"
+            />
+        </div>
+
+        <div class="my-8 text-center">
+            <h2 class="text-3xl font-bold">Nuestra Misión</h2>
+            <div class="max-w-4xl mx-auto p-8 rounded-xl">
+                <p class="text-lg md:text-xl text-gray-800 font-medium">
+                    "Crear juguetes innovadores, seguros y ecológicos que
+                    inspiren la curiosidad, fomenten el aprendizaje y despierten
+                    sonrisas en cada niño. Nos comprometemos a ofrecer productos
+                    de calidad que acompañen las etapas de crecimiento."
+                </p>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <h2 class="text-3xl font-bold">Nuestra Visión</h2>
+            <div class="max-w-4xl mx-auto p-8 rounded-xl">
+                <p class="text-lg md:text-xl text-gray-800 font-medium">
+                    "Ser líderes en juguetes infantiles, destacando por diseño
+                    creativo, sostenibilidad y enfoque educativo. Queremos ser
+                    la marca que padres y niños elijan para crear momentos
+                    inolvidables, cuidando el planeta."
+                </p>
+            </div>
+        </div>
+    </SectionContainer>
+</Layout>

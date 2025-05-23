@@ -3,17 +3,16 @@ import BabyIcon from "../assets/icons/Baby.astro";
 import SearchBox from "./SearchBox.astro";
 ---
 
-<header class="flex justify-between px-4 py-2 max-w-7xl mx-auto">
-    <a href="#" class="flex items-center gap-2">
+<header class="flex justify-between items-center px-4 py-2 max-w-7xl mx-auto">
+    <a href="/" class="flex items-center gap-2">
         <BabyIcon class="size-16" />
         Raimbow <br />Rattles
     </a>
 
     <nav class="flex items-center gap-8 group">
-        <a href="#">Principal</a>
-        <a href="#">Tienda</a>
-        <a href="#">Blog</a>
-        <a href="#">Contacto</a>
+        <a href="/">Principal</a>
+        <a href="/store">Tienda</a>
+        <a href="/contact">Contacto</a>
     </nav>
     <SearchBox />
 </header>
