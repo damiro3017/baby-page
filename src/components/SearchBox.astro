@@ -1,0 +1,25 @@
+---
+import SearchBtnIcon from "../assets/icons/SearchBtnIcon.astro";
+import ShoppingCar from "../assets/icons/ShoppingCar.astro";
+---
+
+<script></script>
+
+<div class="flex items-center gap-x-3">
+    <ShoppingCar class="size-6" />
+    <div class="flex items-center border-2 border-gray-300 rounded-full">
+        <input
+            class="outline-none w-48 pl-4 pr-2 py-2"
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Buscar..."
+        />
+        <button
+            class="flex items-center justify-center bg-blue-400 rounded-full size-10 cursor-pointer"
+            type="button"
+        >
+            <SearchBtnIcon class="size-5 stroke-[#f2f2f2]" />
+        </button>
+    </div>
+</div>
